@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>说说</title>
+</head>
+
+<body>
+    <% include header.ejs %>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>全部说说</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" id="allsays">
+
+        </div>
+        <nav>
+            <ul class="pagination" id="pagenum">
+            </ul>
+        </nav>
+        <hr>
+
+        <footer>
+            <p class="text-center">&copy; 2017 leeper</p>
+        </footer>
+    </div>
+    
+    <script src="js/ajax.js"></script>
+    <script src="js/Underscore.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/template" id="says">
+        <div class="col-md-4 grid">
+            <h2><img width="40" class="avatar" src="/avatar/{{=avatar}}" alt="" />{{=username}}说：</h2>
+
+            <p>{{=content}}</p>
+
+            <p>{{=datetime}}</p>
+
+            <p><a class="btn btn-default" href="#" role="button">查看详细</a></p>
+        </div>
+    </script>
+    <script src="js/allsays.js"></script>
+</body>
+
+</html>

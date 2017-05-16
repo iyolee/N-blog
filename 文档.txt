@@ -1,0 +1,23 @@
+路由：
+/  router.showIndex  主页  get
+/register  router.showRegister  展示注册页面  get
+/doRegister  router.doRegister  处理注册业务  post
+/login  router.showLogin  展示登录页面  get
+/logout  router.logout  登出业务  get
+/doLogin  router.doLogin  处理登录业务  post
+/setavatar  router.showAvatar  展示头像上传页面  get
+/doSetavatar  router.doSetavatar  处理头像上传业务  post
+/showCut  router.showCut  展示头像切割页面  get
+/doCut  router.doCut  处理头像切割业务  get
+/allsays  router.showAll  展示所有说说页面  get
+/allsay  router.getsays  返回所有的说说  get
+/getcount  router.getcount  获得说说数量  get
+/post  router.doPost  发表说说  post
+/getuserinfo  router.getuserinfo  用户信息  get
+/user/:user  router.showUser  //展示用户页  get
+/post/:oid  router.showUser  //展示用户页  get
+/userlist  router.showUserList  //展示全部用户  get
+
+
+接口：
+/allsay?page=1   每页20条

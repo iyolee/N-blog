@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Aspect Ratio with Preview Pane | Jcrop Demo</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery.Jcrop.css">
+</head>
+
+<body>
+
+    <img src="/avatar/<%= avatar %>" id="target" alt="[Jcrop Example]" />
+
+    <div id="preview-pane">
+        <div class="preview-container">
+            <img src="/avatar/<%= avatar %>" class="jcrop-preview" alt="Preview" />
+        </div>
+    </div>
+
+    <input type="button" value="剪裁！" id="btn">
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.Jcrop.min.js"></script>
+    <script src="/js/cutpic.js"></script>
+    <script src="/js/cutAvatar.js"></script>
+
+</body>
+
+</html>

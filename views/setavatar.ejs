@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/ajax.js"></script>
+    <title>更改头像</title>
+</head>
+
+<body>
+
+    <% include header.ejs %>
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="text-center">上传头像</h1><br>
+                <div class="row">
+                    <form action="/doSetavatar" method="post" enctype="multipart/form-data">
+                        <label for="username">选择要更改的头像：</label>
+                        <input type="file" name="avatar">
+                        <button type="submit" class="btn btn-default">更改</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <footer>
+            <p class="text-center">&copy; 2017 leeper</p>
+        </footer>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

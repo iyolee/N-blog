@@ -1,0 +1,52 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+
+/*register.ejs*/
+
+.text-center {
+    text-align: center;
+}
+
+#success,
+#error {
+    display: none;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 150px;
+}
+
+
+/*user*/
+
+
+.one {
+    border-bottom: 1px solid #ccc;
+}
+
+.nav_avatar {
+    width: 22px;
+    height: 22px;
+    border-radius: 30px;
+}
+
+.position textarea {
+    margin-left: 10%;
+}
+
+
+/*/.user*/
+
+/*userlist*/
+.user_one {
+    overflow: hidden;
+}
+
+.userlist_float {
+    float: left;
+}
