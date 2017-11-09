@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-#success,
+#delete-success, #success,
 #error {
     display: none;
 }
@@ -49,4 +49,23 @@ body {
 
 .userlist_float {
     float: left;
+}
+
+.updateHidden {
+    display: none;
+}
+
+.updateDisplay {
+    display: block;
+    width: 800px; 
+    height:400px; 
+    border: solid 2px rgb(167, 165, 165);
+    background: rgb(255, 255, 255); 
+    position: relative;
+    left: 15%; 
+    transform:translateY(-60%);
+}
+
+.background-opacity {
+    opacity: 0.4;
 }

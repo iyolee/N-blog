@@ -3,11 +3,11 @@
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
                 aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <% if (!login) { %>
                 <a class="navbar-brand" href="/">说说</a>
                 <% } else { %>
@@ -18,29 +18,51 @@
             <ul class="nav navbar-nav">
                 <% if (!login) { %>
                     <li <% if (active=='首页' ){ %> class="active"
-                        <% } %>><a href="/">首页</a></li>
+                        <% } %>>
+                            <a href="/">首页</a>
+                    </li>
                     <% } else {%>
                         <li <% if (active=='全部说说' ){ %> class="active"
-                            <% } %>><a href="/allsays">全部说说</a></li>
+                            <% } %>>
+                                <a href="/allsays">全部说说</a>
+                        </li>
                         <li <% if (active=='我的说说' ){ %> class="active"
-                            <% } %>><a href="/user/<%= username %>">我的说说</a></li>
+                            <% } %>>
+                                <a href="/user/<%= username %>">我的说说</a>
+                        </li>
                         <li <% if (active=='成员列表' ){ %> class="active"
-                            <% } %>><a href="/userlist">成员列表</a></li>
+                            <% } %>>
+                                <a href="/userlist">成员列表</a>
+                        </li>
                         <% } %>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <% if (login) { %>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/setavatar"><img class="nav_avatar" src="/avatar/<%= avatar %>" alt="头像"/></a></li>
-                        <li><a href="#"><%= username %></a></li>
-                        <li><a href="/logout">退出登录</a></li>
+                        <li>
+                            <a href="/setavatar">
+                                <img class="nav_avatar" src="/avatar/<%= avatar %>" alt="头像" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <%= username %>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/logout">退出登录</a>
+                        </li>
                     </ul>
                     <% } else { %>
                         <ul class="nav navbar-nav navbar-right">
                             <li <% if (active=='注册' ){ %> class="active"
-                                <% } %>><a href="/register">注册</a></li>
+                                <% } %>>
+                                    <a href="/register">注册</a>
+                            </li>
                             <li <% if (active=='登录' ){ %> class="active"
-                                <% } %>><a href="/login">登录</a></li>
+                                <% } %>>
+                                    <a href="/login">登录</a>
+                            </li>
                         </ul>
                         <% } %>
             </ul>

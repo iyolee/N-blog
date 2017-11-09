@@ -32,6 +32,8 @@ app.get('/allsays', router.showAll);
 app.get('/allsay', router.getsays);
 app.get('/getcount', router.getcount);
 app.post('/post', router.doPost);
+app.delete('/delete', router.deletePost);
+app.post('/update', router.updatePost);
 app.get('/getuserinfo', router.getuserinfo);
 app.get('/user/:user', router.showUser);
 app.get('post/:oid', router.showUser);

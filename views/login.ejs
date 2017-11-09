@@ -18,38 +18,40 @@
 
     <% include header.ejs %>
 
-    <div class="container">
-        <h1 class="text-center">欢迎登录</h1><br>
-        <div class="row">
-            <div class="alert alert-success" role="alert" id="success">
-                <a href="#" class="alert-link">登录成功！ 2秒后将跳转到首页！</a>
-            </div>
-            <div class="alert alert-danger" role="alert" id="error">
-                <a href="#" class="alert-link errormsg"></a>
-            </div>
-            <form>
-                <div class="form-group">
-                    <label for="username">用户名</label>
-                    <input type="text" class="form-control" id="username" placeholder="填写用户名" name="username">
+        <div class="container">
+            <h1 class="text-center">欢迎登录</h1>
+            <br>
+            <div class="row">
+                <div class="alert alert-success" role="alert" id="success">
+                    <a href="#" class="alert-link">登录成功！ 2秒后将跳转到首页！</a>
                 </div>
-                <div class="form-group">
-                    <label for="password">密码</label>
-                    <input type="password" class="form-control" id="password" placeholder="填写密码" name="password">
+                <div class="alert alert-danger" role="alert" id="error">
+                    <a href="#" class="alert-link errormsg"></a>
                 </div>
-                <button type="button" class="btn btn-default">登录</button>
-            </form>
+                <form>
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input type="text" class="form-control" id="username" placeholder="填写用户名" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input type="password" class="form-control" id="password" placeholder="填写密码" pattern="^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z]).*$"
+                            name="password">
+                    </div>
+                    <button type="button" class="btn btn-default">登录</button>
+                </form>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p class="text-center">&copy; 2017 leeper</p>
+            </footer>
         </div>
-
-        <hr>
-
-        <footer>
-            <p class="text-center">&copy; 2017 leeper</p>
-        </footer>
-    </div>
-    <!-- /container -->
-    <script src="js/login.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+        <!-- /container -->
+        <script src="js/login.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
 </body>
 
