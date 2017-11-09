@@ -319,7 +319,7 @@ exports.updatePost = (req, res, next) => {
       }
     );
   });
-}
+};
 
 //显示全部
 exports.showAll = (req, res, next) => {
@@ -404,7 +404,7 @@ exports.showUser = (req, res, next) => {
       db.find(
         'users',
         {
-          username: user,
+          username: user
         },
         {
           sort: {
@@ -412,15 +412,26 @@ exports.showUser = (req, res, next) => {
           }
         },
         (err, result2) => {
-          res.render('user', {
-            login: true,
-            username: req.session.username,
-            user: user,
-            active: '我的说说',
-            contents: result,
-            id: result[0]._id,
-            avatar: result2[0].avatar
-          });
+          if (result == '') {
+            res.render('user', {
+              login: true,
+              username: req.session.username,
+              user: user,
+              active: '我的说说',
+              contents: result,
+              avatar: result2[0].avatar
+            });
+          } else {
+            res.render('user', {
+              login: true,
+              username: req.session.username,
+              user: user,
+              active: '我的说说',
+              contents: result,
+              id: result[0]._id,
+              avatar: result2[0].avatar
+            });
+          }
         }
       );
     }
