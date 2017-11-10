@@ -113,7 +113,6 @@ for (var j = 0; j < updateBtn.length; j++) {
       update_deliver.onclick = function() {
         var update_content = document.getElementById('update-content').value;
         var id = document.querySelector('.one span').textContent.trim();
-        console.log(id);
         console.log(update_content);
         if (update_content == '') {
           window.alert('说说内容不能为空！');
@@ -131,15 +130,17 @@ for (var j = 0; j < updateBtn.length; j++) {
             success: function(result) {
               var success = document.getElementById('success');
               var error = document.getElementById('error');
+              var updatePost = document.getElementById('updatePost');
 
               function fadeIn(obj) {
                 setTimeout(function() {
                   obj.style.display = 'none';
                 }, 1000);
               }
-
-              if (result == 1) {
-                success.style.display = 'block';
+              console.log(result)
+              if (result !== '') {
+                window.alert('修改成功！');
+                fadeIn(updatePost);
                 setTimeout(function() {
                   window.location.reload();
                 }, 1000);

@@ -47,3 +47,4 @@ Thumbs.db
 *.log
 package-lock.json
 avatar/
+data/

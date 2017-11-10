@@ -101,7 +101,7 @@ exports.deleteMany = (collectionName, json, callback) => {
 exports.updateMany = (collectionName, json1, json2, callback) => {
   _connectDB((err, db) => {
     // json1: filter  json2: update
-    db.collection(collectionName).updateMany(json1, json2, (err, result) => {
+    db.collection(collectionName).update(json1, json2, (err, result) => {
       callback(err, result);
       db.close();
     });

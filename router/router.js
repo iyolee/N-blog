@@ -4,6 +4,7 @@ const md5 = require('../models/md5');
 const path = require('path');
 const fs = require('fs');
 const gm = require('gm');
+var ObjectId =  require('mongodb').ObjectID;
 
 //首页
 exports.showIndex = (req, res, next) => {
@@ -305,16 +306,32 @@ exports.updatePost = (req, res, next) => {
     db.updateMany(
       'posts',
       {
-        id: id
+        "_id": ObjectId(id)
       },
       {
+        username: req.session.username,
+        datetime: new Date().toLocaleDateString(),
         content: content
       },
       (err, result) => {
         if (err) {
           res.send('-3'); // 服务器错误
         } else {
-          res.send('1'); // 更新成功
+          db.find(
+            'users',
+            {
+              username: req.session.username
+            },
+            (err, result) => {
+              res.render('allsays', {
+                login: true,
+                username: req.session.username,
+                active: '全部说说',
+                avatar: result[0].avatar
+              });
+            }
+          );
+          // res.send('1'); // 更新成功
         }
       }
     );
